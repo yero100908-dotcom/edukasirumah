@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masuk Redaksi — EdukasiRumahan CMS</title>
+    <title>Masuk Redaksi — RumahCraft CMS</title>
     
     <!-- Tipografi -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,12 +38,19 @@
         
         <!-- Header Identitas Redaksi -->
         <div class="text-center space-y-2">
-            <span class="font-display font-extrabold text-2xl tracking-tight text-slate-900 block">
-                EDUKASI<span class="text-[#C2410C]">RUMAHAN</span>
-            </span>
-            <span class="inline-block text-[11px] font-semibold uppercase tracking-widest text-slate-400 bg-slate-100 px-2.5 py-0.5 rounded">
-                Panel Autentikasi Redaksi
-            </span>
+            <a href="{{ route('home') }}" class="inline-flex flex-col items-center">
+                <span class="font-display font-extrabold text-2xl tracking-tight text-slate-900 block">
+                    RUMAH<span class="text-[#C2410C]">CRAFT</span>
+                </span>
+                <span class="text-[10px] font-medium uppercase tracking-[0.14em] text-slate-500 mt-0.5">
+                    EDUKASI KONSTRUKSI DAN PERAWATAN RUMAH
+                </span>
+            </a>
+            <div>
+                <span class="inline-block text-[11px] font-semibold uppercase tracking-widest text-slate-400 bg-slate-100 px-2.5 py-0.5 rounded">
+                    Panel Autentikasi Redaksi
+                </span>
+            </div>
             <p class="text-xs text-slate-500 pt-1">
                 Akses terisolasi untuk tim editor dan kurator materi teknis bangunan.
             </p>
@@ -76,9 +83,9 @@
                     type="email" 
                     name="email" 
                     id="email" 
-                    value="{{ old('email', 'admin@edukasirumahan.id') }}" 
+                    value="{{ old('email', 'admin@RumahCraft.id') }}" 
                     class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#C2410C]/20 focus:border-[#C2410C]"
-                    placeholder="nama@edukasirumahan.id"
+                    placeholder="nama@RumahCraft.id"
                     required 
                     autofocus>
             </div>
@@ -114,7 +121,7 @@
         <div class="pt-4 border-t border-slate-100 text-[11px] text-slate-500 space-y-2 bg-slate-50/70 -mx-8 -mb-8 p-6 rounded-b-2xl">
             <span class="font-semibold text-slate-700 block">Kredensial Pengujian (Seeder Otomatis):</span>
             <div class="font-mono text-[11px] text-slate-600 bg-white p-2.5 rounded border border-slate-200 space-y-0.5">
-                <div>Email: <strong class="text-slate-800">admin@edukasirumahan.id</strong></div>
+                <div>Email: <strong class="text-slate-800">admin@RumahCraft.id</strong></div>
                 <div>Sandi: <strong class="text-slate-800">admin123</strong></div>
             </div>
             <div class="text-center pt-2">

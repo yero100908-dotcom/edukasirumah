@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Manajemen Kategori Topik — EdukasiRumahan')
+@section('title', 'Manajemen Kategori Topik — RumahCraft')
 @section('page_title', 'Kategori Pembahasan Bangunan')
 
 @section('content')
@@ -19,7 +19,7 @@
             @foreach($categories as $category)
                 <div class="p-5 flex items-start justify-between gap-4 hover:bg-slate-50/70 transition-colors">
                     <div class="flex items-start space-x-3.5">
-                        <div class="w-10 h-10 rounded-lg bg-orange-50 text-[#C2410C] flex items-center justify-center shrink-0 mt-0.5">
+                        <div class="w-10 h-10 rounded-lg bg-orange-50 text-[#2A5C82] flex items-center justify-center shrink-0 mt-0.5">
                             {!! $category->icon ?? '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>' !!}
                         </div>
                         <div class="space-y-1">
@@ -70,7 +70,7 @@
                     id="name" 
                     value="{{ old('name') }}"
                     placeholder="Contoh: Kelistrikan & Pencahayaan"
-                    class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#C2410C]"
+                    class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]"
                     required>
                 @error('name')
                     <span class="text-xs text-rose-600 mt-1 block">{{ $message }}</span>
@@ -86,7 +86,7 @@
                     id="description" 
                     rows="3" 
                     placeholder="Uraian cakupan teknis yang dibahas dalam rubrik ini..."
-                    class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#C2410C]"
+                    class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]"
                     required>{{ old('description') }}</textarea>
                 @error('description')
                     <span class="text-xs text-rose-600 mt-1 block">{{ $message }}</span>
@@ -102,11 +102,11 @@
                     id="icon" 
                     rows="3" 
                     placeholder="<svg ...></svg> (Gunakan tag SVG Lucide murni, bukan emoji)"
-                    class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-lg font-mono text-[11px] text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#C2410C]">{{ old('icon') }}</textarea>
+                    class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-lg font-mono text-[11px] text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]">{{ old('icon') }}</textarea>
                 <span class="text-[11px] text-slate-400 block mt-0.5">Bila dikosongkan, ikon default arsitektur akan digunakan.</span>
             </div>
 
-            <button type="submit" class="w-full py-2.5 px-4 bg-[#C2410C] hover:bg-[#9A3412] text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-xs transition-colors">
+            <button type="submit" class="w-full py-2.5 px-4 bg-[#2A5C82] hover:bg-[#1E4360] text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-xs transition-colors">
                 Simpan Kategori
             </button>
         </form>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'EdukasiRumahan — Panduan Praktis Konstruksi, Perawatan Hunian & Sanitasi')</title>
+    <title>@yield('title', 'RumahCraft — Panduan Praktis Konstruksi, Perawatan Hunian & Sanitasi')</title>
     <meta name="description" content="@yield('meta_description', 'Portal edukasi teknis bangunan, instalasi sanitasi, dan perawatan rumah tangga berbahasa Indonesia dengan standar arsitektur dan konstruksi presisi.')">
 
     <!-- Tipografi Berkarakter: Lora, Plus Jakarta Sans, Inter -->
@@ -99,10 +99,10 @@
             <div class="flex items-center space-x-3">
                 <a href="{{ route('home') }}" class="group flex flex-col">
                     <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 group-hover:text-[#C2410C] transition-colors">
-                        EDUKASI<span class="text-[#C2410C]">RUMAHAN</span>
+                        RUMAH<span class="text-[#C2410C]">CRAFT</span>
                     </span>
-                    <span class="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.22em] text-slate-500 -mt-1">
-                        Pusat Panduan Teknis & Struktur
+                    <span class="text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.12em] sm:tracking-[0.14em] text-slate-500 -mt-1 whitespace-nowrap">
+                        EDUKASI KONSTRUKSI DAN PERAWATAN RUMAH
                     </span>
                 </a>
             </div>
@@ -191,9 +191,14 @@
                 
                 <!-- Kolom Brand & Nilai -->
                 <div class="md:col-span-2 space-y-4">
-                    <span class="font-display font-extrabold text-2xl tracking-tight text-slate-900">
-                        EDUKASI<span class="text-[#C2410C]">RUMAHAN</span>
-                    </span>
+                    <div class="flex flex-col">
+                        <span class="font-display font-extrabold text-2xl tracking-tight text-slate-900">
+                            RUMAH<span class="text-[#C2410C]">CRAFT</span>
+                        </span>
+                        <span class="text-[10px] font-medium uppercase tracking-[0.14em] text-slate-500 mt-0.5">
+                            EDUKASI KONSTRUKSI DAN PERAWATAN RUMAH
+                        </span>
+                    </div>
                     <p class="text-sm text-slate-600 leading-relaxed max-w-md">
                         Pusat referensi dan jurnal teknik konstruksi sipil, metode pemasangan finishing, sistem utilitas pipa sanitasi, serta perawatan rumah tangga mandiri dengan standar keamanan dan ketahanan jangka panjang.
                     </p>
@@ -251,7 +256,7 @@
 
             <!-- Bar Bawah Legal & Akses Redaksi -->
             <div class="border-t border-slate-100 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-                <p>&copy; {{ date('Y') }} EdukasiRumahan. Seluruh konten edukasi disajikan untuk keselamatan dan ketahanan hunian Indonesia.</p>
+                <p>&copy; {{ date('Y') }} RumahCraft. Seluruh konten edukasi disajikan untuk keselamatan dan ketahanan hunian Indonesia.</p>
                 <div class="flex items-center space-x-4">
                     <span class="text-slate-400">Terbuka untuk Publik • Tanpa Login</span>
                     <span class="text-slate-300">•</span>

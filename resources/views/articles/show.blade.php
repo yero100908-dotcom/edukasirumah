@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $article->title . ' — EdukasiRumahan')
+@section('title', $article->title . ' — RumahCraft')
 @section('meta_description', Str::limit($article->excerpt, 155))
 
 @section('content')
@@ -355,7 +355,7 @@
                         Standar Verifikasi Lapangan
                     </span>
                     <p class="text-[11px] leading-relaxed text-slate-500">
-                        Setiap panduan di EdukasiRumahan disusun berdasarkan SNI dan pengalaman mandor/ahli sipil lapangan, bebas dari kompromi kualitas material.
+                        Setiap panduan di RumahCraft disusun berdasarkan SNI dan pengalaman mandor/ahli sipil lapangan, bebas dari kompromi kualitas material.
                     </p>
                 </div>
 

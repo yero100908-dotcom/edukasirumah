@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Daftar Artikel & Panduan Teknis — EdukasiRumahan')
+@section('title', 'Daftar Artikel & Panduan Teknis — RumahCraft')
 @section('page_title', 'Manajemen Artikel & Panduan')
 
 @section('content')
@@ -21,14 +21,14 @@
                         name="q" 
                         value="{{ request('q') }}" 
                         placeholder="Cari judul atau ringkasan..." 
-                        class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#C2410C]">
+                        class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]">
                 </div>
 
                 <!-- Status Filter -->
                 <select 
                     name="status" 
                     onchange="this.form.submit()" 
-                    class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-700 focus:outline-none focus:ring-1 focus:ring-[#C2410C]">
+                    class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-700 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]">
                     <option value="">Semua Status</option>
                     <option value="published" {{ request('status') === 'published' ? 'selected' : '' }}>Tayang (Published)</option>
                     <option value="scheduled" {{ request('status') === 'scheduled' ? 'selected' : '' }}>Terjadwal (Scheduled)</option>
@@ -39,7 +39,7 @@
                 <select 
                     name="category_id" 
                     onchange="this.form.submit()" 
-                    class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-700 focus:outline-none focus:ring-1 focus:ring-[#C2410C]">
+                    class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-700 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]">
                     <option value="">Semua Kategori</option>
                     @foreach($categories as $cat)
                         <option value="{{ $cat->id }}" {{ request('category_id') == $cat->id ? 'selected' : '' }}>
@@ -83,10 +83,10 @@
                             <!-- Judul & Kategori -->
                             <td class="py-4 px-6 max-w-md">
                                 <div class="space-y-1">
-                                    <span class="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-orange-50 text-[#C2410C] border border-orange-200/50">
+                                    <span class="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-orange-50 text-[#2A5C82] border border-orange-200/50">
                                         {{ $art->category->name }}
                                     </span>
-                                    <a href="{{ route('admin.articles.edit', $art->id) }}" class="font-bold text-sm text-slate-900 hover:text-[#C2410C] transition-colors block line-clamp-1">
+                                    <a href="{{ route('admin.articles.edit', $art->id) }}" class="font-bold text-sm text-slate-900 hover:text-[#2A5C82] transition-colors block line-clamp-1">
                                         {{ $art->title }}
                                     </a>
                                     <div class="flex items-center space-x-2 text-[11px] text-slate-400">
@@ -147,7 +147,7 @@
                                     </a>
                                 @endif
 
-                                <a href="{{ route('admin.articles.edit', $art->id) }}" class="p-1.5 text-slate-400 hover:text-[#C2410C] hover:bg-slate-100 rounded inline-block" title="Edit Artikel">
+                                <a href="{{ route('admin.articles.edit', $art->id) }}" class="p-1.5 text-slate-400 hover:text-[#2A5C82] hover:bg-slate-100 rounded inline-block" title="Edit Artikel">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                                     </svg>

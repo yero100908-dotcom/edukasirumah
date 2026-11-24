@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Moderasi Diskusi & Komentar — EdukasiRumahan')
+@section('title', 'Moderasi Diskusi & Komentar — RumahCraft')
 @section('page_title', 'Moderasi Komentar & Tanya Jawab')
 
 @section('content')
@@ -8,23 +8,23 @@
 
     <!-- TAB FILTER STATUS MODERASI -->
     <div class="flex items-center space-x-2 border-b border-slate-200 pb-3 text-xs font-semibold">
-        <a href="{{ route('admin.comments.index', ['status' => 'pending']) }}" class="px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 {{ $status === 'pending' ? 'bg-[#C2410C] text-white' : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50' }}">
+        <a href="{{ route('admin.comments.index', ['status' => 'pending']) }}" class="px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 {{ $status === 'pending' ? 'bg-[#2A5C82] text-white' : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50' }}">
             <span>Menunggu Moderasi</span>
             @if($pendingCount > 0)
-                <span class="px-1.5 py-0.2 rounded-full text-[10px] {{ $status === 'pending' ? 'bg-white text-[#C2410C]' : 'bg-amber-500 text-white' }}">
+                <span class="px-1.5 py-0.2 rounded-full text-[10px] {{ $status === 'pending' ? 'bg-white text-[#2A5C82]' : 'bg-amber-500 text-white' }}">
                     {{ $pendingCount }}
                 </span>
             @endif
         </a>
 
-        <a href="{{ route('admin.comments.index', ['status' => 'approved']) }}" class="px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 {{ $status === 'approved' ? 'bg-[#C2410C] text-white' : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50' }}">
+        <a href="{{ route('admin.comments.index', ['status' => 'approved']) }}" class="px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 {{ $status === 'approved' ? 'bg-[#2A5C82] text-white' : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50' }}">
             <span>Telah Disetujui</span>
-            <span class="px-1.5 py-0.2 rounded-full text-[10px] {{ $status === 'approved' ? 'bg-white text-[#C2410C]' : 'bg-slate-200 text-slate-700' }}">
+            <span class="px-1.5 py-0.2 rounded-full text-[10px] {{ $status === 'approved' ? 'bg-white text-[#2A5C82]' : 'bg-slate-200 text-slate-700' }}">
                 {{ $approvedCount }}
             </span>
         </a>
 
-        <a href="{{ route('admin.comments.index', ['status' => 'all']) }}" class="px-4 py-2 rounded-lg transition-colors {{ $status === 'all' ? 'bg-[#C2410C] text-white' : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50' }}">
+        <a href="{{ route('admin.comments.index', ['status' => 'all']) }}" class="px-4 py-2 rounded-lg transition-colors {{ $status === 'all' ? 'bg-[#2A5C82] text-white' : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50' }}">
             <span>Semua Diskusi</span>
         </a>
     </div>
@@ -69,7 +69,7 @@
                     <div class="text-slate-500">
                         Pada Panduan: 
                         @if($comment->article)
-                            <a href="{{ route('articles.show', $comment->article->slug) }}" target="_blank" class="font-semibold text-slate-800 hover:text-[#C2410C] underline">
+                            <a href="{{ route('articles.show', $comment->article->slug) }}" target="_blank" class="font-semibold text-slate-800 hover:text-[#2A5C82] underline">
                                 {{ $comment->article->title }}
                             </a>
                         @else

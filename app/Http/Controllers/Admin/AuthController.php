@@ -42,7 +42,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
 
             return redirect()->intended(route('admin.dashboard'))
-                ->with('success', 'Selamat datang kembali di Panel Redaksi EdukasiRumahan.');
+                ->with('success', 'Selamat datang kembali di Panel Redaksi RumahCraft.');
         }
 
         return back()->withErrors([

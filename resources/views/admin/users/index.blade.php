@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Manajemen Pengguna & Role Admin — EdukasiRumahan')
+@section('title', 'Manajemen Pengguna & Role Admin — RumahCraft')
 @section('page_title', 'Kelola Pengguna & Role Admin')
 
 @section('content')
@@ -54,8 +54,8 @@
 
                                 <td class="py-4 px-4 whitespace-nowrap">
                                     @if($admin->role === 'superadmin')
-                                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold bg-orange-50 text-[#C2410C] border border-orange-200">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-[#C2410C] mr-1.5"></span>
+                                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold bg-orange-50 text-[#2A5C82] border border-orange-200">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-[#2A5C82] mr-1.5"></span>
                                             Superadmin
                                         </span>
                                     @else
@@ -128,7 +128,7 @@
                         id="name" 
                         value="{{ old('name') }}"
                         placeholder="Contoh: Budi Santoso, S.T."
-                        class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#C2410C]"
+                        class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]"
                         required>
                     @error('name')
                         <span class="text-xs text-rose-600 mt-1 block">{{ $message }}</span>
@@ -144,8 +144,8 @@
                         name="email" 
                         id="email" 
                         value="{{ old('email') }}"
-                        placeholder="staf@edukasirumahan.id"
-                        class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#C2410C]"
+                        placeholder="staf@RumahCraft.id"
+                        class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]"
                         required>
                     @error('email')
                         <span class="text-xs text-rose-600 mt-1 block">{{ $message }}</span>
@@ -161,7 +161,7 @@
                         name="password" 
                         id="password" 
                         placeholder="Minimal 6 karakter"
-                        class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#C2410C]"
+                        class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]"
                         required>
                     @error('password')
                         <span class="text-xs text-rose-600 mt-1 block">{{ $message }}</span>
@@ -175,14 +175,14 @@
                     <select 
                         name="role" 
                         id="role" 
-                        class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:outline-none focus:ring-1 focus:ring-[#C2410C]"
+                        class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]"
                         required>
                         <option value="editor" {{ old('role') === 'editor' ? 'selected' : '' }}>Editor (Penulis Panduan Teknis)</option>
                         <option value="superadmin" {{ old('role') === 'superadmin' ? 'selected' : '' }}>Superadmin (Akses Penuh)</option>
                     </select>
                 </div>
 
-                <button type="submit" class="w-full py-2.5 px-4 bg-[#C2410C] hover:bg-[#9A3412] text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-xs transition-colors">
+                <button type="submit" class="w-full py-2.5 px-4 bg-[#2A5C82] hover:bg-[#1E4360] text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-xs transition-colors">
                     Daftarkan Akun
                 </button>
             </form>
@@ -271,7 +271,7 @@
                         <button type="button" @click="editModalOpen = false" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-xs font-semibold text-slate-600">
                             Batal
                         </button>
-                        <button type="submit" class="px-4 py-2 bg-[#C2410C] hover:bg-[#9A3412] text-white rounded-lg text-xs font-semibold">
+                        <button type="submit" class="px-4 py-2 bg-[#2A5C82] hover:bg-[#1E4360] text-white rounded-lg text-xs font-semibold">
                             Simpan Perubahan
                         </button>
                     </div>

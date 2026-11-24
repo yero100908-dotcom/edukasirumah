@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Manajemen Tag Topik — EdukasiRumahan')
+@section('title', 'Manajemen Tag Topik — RumahCraft')
 @section('page_title', 'Tag & Kata Kunci Teknis')
 
 @section('content')
@@ -17,7 +17,7 @@
 
         <div class="p-6 flex flex-wrap gap-2.5">
             @foreach($tags as $t)
-                <div class="inline-flex items-center space-x-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs group hover:border-[#C2410C]/40">
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs group hover:border-[#2A5C82]/40">
                     <span class="font-medium text-slate-800">#{{ $t->name }}</span>
                     <span class="text-[10px] text-slate-400 bg-white px-1.5 py-0.5 rounded border border-slate-200">
                         {{ $t->articles_count }}
@@ -53,14 +53,14 @@
                     id="name" 
                     value="{{ old('name') }}"
                     placeholder="Contoh: Waterproofing Dak Beton"
-                    class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#C2410C]"
+                    class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-[#2A5C82]"
                     required>
                 @error('name')
                     <span class="text-xs text-rose-600 mt-1 block">{{ $message }}</span>
                 @enderror
             </div>
 
-            <button type="submit" class="w-full py-2.5 px-4 bg-[#C2410C] hover:bg-[#9A3412] text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-xs transition-colors">
+            <button type="submit" class="w-full py-2.5 px-4 bg-[#2A5C82] hover:bg-[#1E4360] text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-xs transition-colors">
                 Tambah Tag
             </button>
         </form>

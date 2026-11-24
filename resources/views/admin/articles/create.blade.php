@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Tulis Panduan Baru — EdukasiRumahan')
+@section('title', 'Tulis Panduan Baru — RumahCraft')
 @section('page_title', 'Tulis Panduan Teknis Baru')
 
 @section('content')
@@ -8,7 +8,7 @@
 
     <!-- Header Atas: Navigasi Balik & Breadcrumb -->
     <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-        <a href="{{ route('admin.articles.index') }}" class="text-xs font-semibold text-slate-600 hover:text-[#C2410C] flex items-center gap-1.5 transition-colors">
+        <a href="{{ route('admin.articles.index') }}" class="text-xs font-semibold text-slate-600 hover:text-[#2A5C82] flex items-center gap-1.5 transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
             </svg>
@@ -61,11 +61,11 @@
                         id="article_title" 
                         x-model="articleTitle"
                         placeholder="Contoh: Anatomi Pondasi Batu Kali yang Kokoh untuk Mencegah Retak Rambut" 
-                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-base font-semibold text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#C2410C]/20 focus:border-[#C2410C] transition-all"
+                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-base font-semibold text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#2A5C82]/20 focus:border-[#2A5C82] transition-all"
                         required>
                     <div class="text-[11px] text-slate-500 flex items-center gap-1.5 font-mono pt-1">
                         <span class="text-slate-400">Pratinjau Slug:</span>
-                        <span class="text-[#C2410C] font-semibold bg-orange-50 px-2 py-0.5 rounded border border-orange-200/60" x-text="slugPreview() || 'judul-panduan-otomatis'"></span>
+                        <span class="text-[#2A5C82] font-semibold bg-orange-50 px-2 py-0.5 rounded border border-orange-200/60" x-text="slugPreview() || 'judul-panduan-otomatis'"></span>
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@
                         id="excerpt" 
                         rows="2" 
                         placeholder="Uraikan inti masalah struktural di lapangan dan prinsip solusi teknis yang akan dipaparkan..."
-                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#C2410C]/20 focus:border-[#C2410C] transition-all"
+                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#2A5C82]/20 focus:border-[#2A5C82] transition-all"
                         required>{{ old('excerpt') }}</textarea>
                 </div>
 
@@ -105,7 +105,7 @@
                             <button 
                                 type="button" 
                                 @click="activeTab = 'preview'" 
-                                :class="activeTab === 'preview' ? 'bg-white text-[#C2410C] shadow-2xs font-bold' : 'text-slate-500 hover:text-slate-900'"
+                                :class="activeTab === 'preview' ? 'bg-white text-[#2A5C82] shadow-2xs font-bold' : 'text-slate-500 hover:text-slate-900'"
                                 class="px-3 py-1 rounded-md transition-all">
                                 Pratinjau Tampilan
                             </button>
@@ -152,7 +152,7 @@
                                 <button type="button" @click="insertBlock('steps')" class="px-2.5 py-1.5 bg-[#0F4C5C] hover:bg-[#0c3c49] text-white rounded-md font-medium text-[11px] shadow-2xs transition-colors flex items-center gap-1" title="Sisipkan Kotak Langkah Kerja">
                                     <span>📋 + Langkah Kerja</span>
                                 </button>
-                                <button type="button" @click="insertBlock('warning')" class="px-2.5 py-1.5 bg-[#C2410C] hover:bg-[#9A3412] text-white rounded-md font-medium text-[11px] shadow-2xs transition-colors flex items-center gap-1" title="Sisipkan Kotak Peringatan Teknis">
+                                <button type="button" @click="insertBlock('warning')" class="px-2.5 py-1.5 bg-[#2A5C82] hover:bg-[#1E4360] text-white rounded-md font-medium text-[11px] shadow-2xs transition-colors flex items-center gap-1" title="Sisipkan Kotak Peringatan Teknis">
                                     <span>⚠️ + Peringatan Fatal</span>
                                 </button>
                             </div>
@@ -211,7 +211,7 @@
                             name="status" 
                             id="status" 
                             x-model="articleStatus"
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:bg-white focus:ring-1 focus:ring-[#C2410C]">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:bg-white focus:ring-1 focus:ring-[#2A5C82]">
                             <option value="published">Tayang Sekarang (Published)</option>
                             <option value="scheduled">Jadwalkan Tayang (Scheduled)</option>
                             <option value="draft">Simpan Draf (Draft)</option>
@@ -246,7 +246,7 @@
                     </div>
 
                     <div class="pt-2">
-                        <button type="submit" class="w-full py-3 px-4 bg-[#C2410C] hover:bg-[#9A3412] text-white text-xs font-extrabold uppercase tracking-wider rounded-xl shadow-xs transition-all flex items-center justify-center gap-2">
+                        <button type="submit" class="w-full py-3 px-4 bg-[#2A5C82] hover:bg-[#1E4360] text-white text-xs font-extrabold uppercase tracking-wider rounded-xl shadow-xs transition-all flex items-center justify-center gap-2">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
@@ -268,7 +268,7 @@
                         <select 
                             name="category_id" 
                             id="category_id" 
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:bg-white focus:ring-1 focus:ring-[#C2410C]"
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:bg-white focus:ring-1 focus:ring-[#2A5C82]"
                             required>
                             <option value="">-- Pilih Kategori --</option>
                             @foreach($categories as $cat)
@@ -292,7 +292,7 @@
                                         name="tags[]" 
                                         value="{{ $t->id }}" 
                                         {{ in_array($t->id, old('tags', [])) ? 'checked' : '' }}
-                                        class="rounded border-slate-300 text-[#C2410C] focus:ring-[#C2410C]">
+                                        class="rounded border-slate-300 text-[#2A5C82] focus:ring-[#2A5C82]">
                                     <span>#{{ $t->name }}</span>
                                 </label>
                             @endforeach
@@ -310,7 +310,7 @@
                             id="new_tags" 
                             value="{{ old('new_tags') }}"
                             placeholder="Contoh: Sloof Gantung, Waterproofing" 
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-1 focus:ring-[#C2410C]">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-1 focus:ring-[#2A5C82]">
                     </div>
                 </div>
 

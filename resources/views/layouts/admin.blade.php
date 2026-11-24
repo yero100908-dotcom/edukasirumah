@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Panel Redaksi & CMS — EdukasiRumahan')</title>
+    <title>@yield('title', 'Panel Redaksi & CMS — RumahCraft')</title>
 
     <!-- Tipografi Berkarakter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,10 +66,10 @@
         <div class="h-20 flex items-center px-6 border-b border-slate-800 bg-slate-950/50">
             <a href="{{ route('admin.dashboard') }}" class="flex flex-col group">
                 <span class="font-display font-extrabold text-lg tracking-tight text-white group-hover:text-orange-400 transition-colors">
-                    EDUKASI<span class="text-[#C2410C]">RUMAHAN</span>
+                    RUMAH<span class="text-[#C2410C]">CRAFT</span>
                 </span>
-                <span class="text-[10px] uppercase tracking-widest text-slate-400 font-medium">
-                    Panel Redaksi &amp; CMS
+                <span class="text-[9px] uppercase tracking-wider text-slate-400 font-medium">
+                    EDUKASI KONSTRUKSI &amp; PERAWATAN RUMAH
                 </span>
             </a>
         </div>

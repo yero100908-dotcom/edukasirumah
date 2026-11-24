@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Ringkasan Redaksi & Statistik — EdukasiRumahan')
+@section('title', 'Ringkasan Redaksi & Statistik — RumahCraft')
 @section('page_title', 'Ringkasan & Statistik Redaksi')
 
 @section('content')
