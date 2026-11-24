@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg3)"/>
+
+  <!-- Pipa Slope Miring 1% - 2% -->
+  <path d="M 80 160 L 620 230 L 620 300 L 80 230 Z" fill="#38BDF8" opacity="0.9" stroke="#E0F2FE" stroke-width="3"/>
+  <text x="350" y="245" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0C4A6E" text-anchor="middle">KEMIRINGAN SLOPE STANDAR: 1% S.D. 2% (TURUN 1-2 CM/METER)</text>
+
+  <!-- Clean Out Plug Vertikal -->
+  <rect x="220" y="70" width="60" height="110" fill="#E2E8F0" stroke="#0284C7" stroke-width="2"/>
+  <ellipse cx="250" cy="70" rx="30" ry="12" fill="#F59E0B"/>
+  <text x="250" y="50" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FDE68A" text-anchor="middle">CLEAN OUT (CO)</text>
+
+  <!-- Elbow 45 Derajat Ganda -->
+  <path d="M 620 230 Q 670 240 700 290 L 700 420 L 630 420 L 630 300 Z" fill="#0284C7" stroke="#BAE6FD" stroke-width="2"/>
+  <text x="700" y="360" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="start">KNEE 45° GANDA (BUKAN 90° SIKU)</text>
+
+  <!-- Partikel Air & Kotoran Mengalir Sempurna -->
+  <circle cx="160" cy="200" r="10" fill="#F8FAFC"/>
+  <circle cx="280" cy="215" r="14" fill="#F59E0B"/>
+  <circle cx="440" cy="235" r="12" fill="#F8FAFC"/>
+  <circle cx="560" cy="255" r="16" fill="#F59E0B"/>
+
+  <!-- Badge Kategori -->
+  <rect x="40" y="40" width="190" height="32" rx="6" fill="#0F4C5C"/>
+  <text x="135" y="61" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">INSTALASI PIPA &amp; SANITASI</text>
+</svg>
+

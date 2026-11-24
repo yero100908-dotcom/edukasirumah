@@ -1,0 +1,126 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-serif: 'Lora', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --color-terracotta: #C2410C;
+    --color-terracotta-dark: #9A3412;
+    --color-forest: #0F4C5C;
+    --color-alabaster: #FAF9F6;
+    --color-charcoal: #1E293B;
+}
+
+/* Custom Base Styles */
+body {
+    background-color: #FAF9F6;
+    color: #1E293B;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-editorial {
+    font-family: 'Lora', Georgia, serif;
+}
+
+.font-display {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Prosa Konten Edukasi Teknis */
+.article-prose {
+    color: #334155;
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.8;
+}
+
+.article-prose p {
+    margin-bottom: 1.5rem;
+}
+
+.article-prose h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-top: 2.75rem;
+    margin-bottom: 1rem;
+    line-height: 1.35;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.article-prose h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1E293B;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.article-prose ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    space-y: 0.5rem;
+}
+
+.article-prose ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    space-y: 0.5rem;
+}
+
+.article-prose strong {
+    font-weight: 600;
+    color: #0F172A;
+}
+
+.article-prose code {
+    background-color: #F1F5F9;
+    color: #C2410C;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Komponen Khusus Edukasi Teknis */
+.edu-box-tools {
+    background-color: #F8FAFC;
+    border: 1px solid #CBD5E1;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+}
+
+.edu-box-steps {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-left: 4px solid #0F4C5C;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+}
+
+.edu-box-warning {
+    background-color: #FFFBEB;
+    border: 1px solid #FDE68A;
+    border-left: 4px solid #C2410C;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Scroll margin for anchor jumps */
+[id] {
+    scroll-margin-top: 6rem;
+}
+

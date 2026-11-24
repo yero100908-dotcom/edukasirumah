@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#365314"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg5)"/>
+
+  <!-- Lapisan Tanah 1: Tanah Humus Urugan Lunak -->
+  <rect x="100" y="100" width="600" height="60" fill="#713F12" opacity="0.8"/>
+  <text x="400" y="135" font-family="sans-serif" font-size="13" font-weight="bold" fill="#FEF08A" text-anchor="middle">LAPISAN ATAS: TANAH HUMUS / URUGAN LUNAK (0 - 1.0 M)</text>
+
+  <!-- Lapisan Tanah 2: Lempung Ekspansif (Zona Kembang-Susut) -->
+  <rect x="100" y="165" width="600" height="110" fill="#451A03" opacity="0.9"/>
+  <text x="400" y="225" font-family="sans-serif" font-size="13" font-weight="bold" fill="#FDBA74" text-anchor="middle">ZONA EKSPANSIF: LEMPUNG BERFLUKTUASI AIR (1.0 - 2.5 M)</text>
+
+  <!-- Lapisan Tanah 3: Tanah Padas Keras -->
+  <rect x="100" y="280" width="600" height="150" fill="#1C1917"/>
+  <text x="400" y="360" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4ADE80" text-anchor="middle">TANAH KERAS TARGET (qc &gt; 150 - 200 KG/CM²) &gt; 2.5 M</text>
+
+  <!-- Tiang Strauss Pile Menembus ke Tanah Keras -->
+  <rect x="240" y="60" width="40" height="320" fill="#94A3B8" stroke="#F8FAFC" stroke-width="2"/>
+  <rect x="520" y="60" width="40" height="320" fill="#94A3B8" stroke="#F8FAFC" stroke-width="2"/>
+  <text x="260" y="410" font-family="sans-serif" font-size="11" font-weight="bold" fill="#F8FAFC" text-anchor="middle">BORED PILE</text>
+  <text x="540" y="410" font-family="sans-serif" font-size="11" font-weight="bold" fill="#F8FAFC" text-anchor="middle">BORED PILE</text>
+
+  <!-- Badge Kategori -->
+  <rect x="40" y="40" width="180" height="32" rx="6" fill="#C2410C"/>
+  <text x="130" y="61" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">STRUKTUR &amp; PONDASI</text>
+</svg>
+
