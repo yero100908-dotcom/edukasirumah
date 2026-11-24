@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin;
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Tag;
+use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -41,7 +43,7 @@ class ArticleController extends Controller
             });
         }
 
-        $articles = $query->latest()->paginate(10)->withQueryString();
+        $articles = $query->latest('created_at')->paginate(10)->withQueryString();
         $categories = Category::orderBy('name')->get();
 
         return view('admin.articles.index', compact('articles', 'categories'));
@@ -103,14 +105,20 @@ class ArticleController extends Controller
             $thumbnailPath = 'uploads/thumbnails/' . $fileName;
         }
 
-        // Tanggal publikasi
-        $publishedAt = $validated['published_at'] ?? null;
-        if ($validated['status'] === 'published' && empty($publishedAt)) {
+        // Tentukan tanggal publikasi secara presisi:
+        // Jika status "published" (Tayang Sekarang) -> published_at WAJIB NOW agar langsung tampil di frontend
+        if ($validated['status'] === 'published') {
             $publishedAt = now();
+        } elseif ($validated['status'] === 'scheduled') {
+            $publishedAt = !empty($validated['published_at']) ? Carbon::parse($validated['published_at']) : now()->addDay();
+        } else {
+            $publishedAt = null;
         }
 
+        $adminId = Auth::guard('admin')->id() ?: (Admin::value('id') ?? 1);
+
         $article = Article::create([
-            'admin_id' => Auth::guard('admin')->id() ?: (Admin::value('id') ?? 1),
+            'admin_id' => $adminId,
             'category_id' => $validated['category_id'],
             'title' => $validated['title'],
             'slug' => $slug,
@@ -137,10 +145,12 @@ class ArticleController extends Controller
             }
         }
 
-        $article->tags()->sync(array_unique($tagIds));
+        if (!empty($tagIds)) {
+            $article->tags()->sync(array_unique($tagIds));
+        }
 
         $redirect = redirect()->route('admin.articles.index')
-            ->with('success', 'Panduan teknis "' . $article->title . '" berhasil diterbitkan dan langsung tampil di website publik!');
+            ->with('success', 'Panduan teknis "' . $article->title . '" berhasil diterbitkan dan langsung terhubung ke website publik!');
 
         if ($article->status === 'published') {
             $redirect->with('live_article_url', route('articles.show', $article->slug));
@@ -199,7 +209,6 @@ class ArticleController extends Controller
 
         // Upload thumbnail baru jika ada
         if ($request->hasFile('thumbnail')) {
-            // Hapus thumbnail lama jika ada
             if ($article->thumbnail && file_exists(public_path($article->thumbnail))) {
                 @unlink(public_path($article->thumbnail));
             }
@@ -211,9 +220,12 @@ class ArticleController extends Controller
         }
 
         // Tanggal publikasi
-        $publishedAt = $validated['published_at'] ?? $article->published_at;
-        if ($validated['status'] === 'published' && empty($publishedAt)) {
-            $publishedAt = now();
+        if ($validated['status'] === 'published') {
+            $publishedAt = ($article->published_at && $article->published_at <= now()) ? $article->published_at : now();
+        } elseif ($validated['status'] === 'scheduled') {
+            $publishedAt = !empty($validated['published_at']) ? Carbon::parse($validated['published_at']) : ($article->published_at ?: now()->addDay());
+        } else {
+            $publishedAt = null;
         }
 
         $article->category_id = $validated['category_id'];
@@ -239,8 +251,14 @@ class ArticleController extends Controller
 
         $article->tags()->sync(array_unique($tagIds));
 
-        return redirect()->route('admin.articles.index')
-            ->with('success', 'Perubahan pada artikel "' . $article->title . '" berhasil disimpan.');
+        $redirect = redirect()->route('admin.articles.index')
+            ->with('success', 'Perubahan pada panduan "' . $article->title . '" berhasil disimpan dan diperbarui di website publik.');
+
+        if ($article->status === 'published') {
+            $redirect->with('live_article_url', route('articles.show', $article->slug));
+        }
+
+        return $redirect;
     }
 
     /**
@@ -259,4 +277,3 @@ class ArticleController extends Controller
             ->with('success', 'Artikel "' . $title . '" berhasil dihapus secara permanen.');
     }
 }
-

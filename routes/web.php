@@ -25,6 +25,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Halaman Pencarian & Filter Topik / Tag
 Route::get('/cari', [SearchController::class, 'index'])->name('search');
+Route::redirect('/pencarian', '/cari');
 
 // Detail Panduan Teknis & Arsitektural (/panduan/{slug})
 Route::get('/panduan/{slug}', [ArticleController::class, 'show'])->name('articles.show');

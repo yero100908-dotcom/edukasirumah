@@ -68,14 +68,16 @@ body {
     list-style-type: disc;
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
-    space-y: 0.5rem;
 }
 
 .article-prose ol {
     list-style-type: decimal;
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
-    space-y: 0.5rem;
+}
+
+.article-prose li {
+    margin-top: 0.5rem;
 }
 
 .article-prose strong {
@@ -92,35 +94,47 @@ body {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+.article-prose img {
+    border-radius: 0.75rem;
+    border: 1px solid #E2E8F0;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
 /* Komponen Khusus Edukasi Teknis */
 .edu-box-tools {
     background-color: #F8FAFC;
     border: 1px solid #CBD5E1;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     padding: 1.25rem 1.5rem;
     margin: 2rem 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 .edu-box-steps {
     background-color: #FFFFFF;
     border: 1px solid #E2E8F0;
     border-left: 4px solid #0F4C5C;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     padding: 1.25rem 1.5rem;
     margin: 2rem 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 .edu-box-warning {
     background-color: #FFFBEB;
     border: 1px solid #FDE68A;
     border-left: 4px solid #C2410C;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     padding: 1.25rem 1.5rem;
     margin: 2rem 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 /* Scroll margin for anchor jumps */
 [id] {
     scroll-margin-top: 6rem;
 }
-
